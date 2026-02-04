@@ -1,8 +1,32 @@
-import { Menu, Search, ShoppingCart } from "lucide-react";
+import { Menu, Search, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const cards = [];
+for (let i = 0; i < 9; i++) {
+  cards.push(
+    <div className="flex gap-4 rounded-md bg-white p-2 md:p-4 items-center shadow-md" key={i}>
+                <div className="bg-[#EFEBE3] p-3 rounded-md">
+                  <Image
+                    src="/images/sm_card.png"
+                    alt=""
+                    width={42}
+                    height={42}
+                  />
+                </div>
+                <div>
+                  <div className="flex gap-2 text-xs md:text-sm items-center">
+                    <Star fill="#FFC107" size={20} className="text-[#FFC107]" />
+                    <p>4.5</p>
+                  </div>
+                  <p className="font-medium my-1 text-xs md:text-base">Tomatoo 500 g</p>
+                  <p className="text-xs md:text-sm">$39.99</p>
+                </div>
+              </div>
+  );
+}
+
   return (
     <>
       <header>
@@ -89,7 +113,9 @@ export default function Home() {
       <main>
         {/* services */}
         <section className="container py-12">
-          <h2 className="font-semibold text-2xl text-[#179800] mb-6">Services</h2>
+          <h2 className="font-semibold text-2xl text-[#179800] mb-6">
+            Services
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* card 1 */}
             <div className="bg-[#EFEBE3] rounded-md p-6 text-center">
@@ -147,6 +173,59 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt
               </p>
+            </div>
+          </div>
+        </section>
+        {/* products */}
+        <section className="py-12 bg-[#EFEBE3]">
+          {/* section container */}
+          <div className="container">
+            <h2 className="font-semibold text-2xl text-[#179800] mb-6">
+              Popular Products
+            </h2>
+            {/* card container */}
+            <div className="grid grid-cols-2 md:grid-cols-[1.3fr_repeat(3,1fr)] gap-4">
+              {/* card 1 */}
+              <div className="offer-card col-span-2 md:col-span-1 md:row-span-3 rounded-md p-4 relative shadow-md">
+                <h4 className="text-white text-3xl mt-6 md:mt-16">30% OFF</h4>
+                <p className="text-sm my-4">
+                  Discover a world of treats, toys, and
+                  <br />
+                  essentials handpicked for
+                </p>
+                <button className="px-6 py-1 bg-white text-[#111111] rounded-md cursor-pointer mb-6">
+                  Buy Now
+                </button>
+                <div className="absolute bottom-0 right-2">
+                  <Image
+                    src="/images/offer_card.png"
+                    alt=""
+                    width={160}
+                    height={250}
+                    className=" object-cover"
+                  />
+                </div>
+              </div>
+              {/* card 2 */}
+              {/* <div className="flex gap-4 rounded-md bg-white px-4 items-center shadow-md">
+                <div className="bg-[#EFEBE3] p-3 rounded-md">
+                  <Image
+                    src="/images/sm_card.png"
+                    alt=""
+                    width={42}
+                    height={42}
+                  />
+                </div>
+                <div>
+                  <div className="flex gap-2 text-sm items-center">
+                    <Star fill="#FFC107" size={20} className="text-[#FFC107]" />
+                    <p>4.5</p>
+                  </div>
+                  <p className="font-medium my-1">Tomatoo 500 g</p>
+                  <p className="text-sm">$39.99</p>
+                </div>
+              </div> */}
+              {cards}
             </div>
           </div>
         </section>

@@ -10,3 +10,6 @@ body{
 header{
     background: linear-gradient(to top, #EFEBE3 0%, #FFFFFF 100%);
 }
+.offer-card{
+    background: linear-gradient(to right bottom, #53DB3A 0%, #FFFFFF 100%);
+}
