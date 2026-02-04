@@ -20,7 +20,7 @@ for (let i = 0; i < 9; i++) {
                     <Star fill="#FFC107" size={20} className="text-[#FFC107]" />
                     <p>4.5</p>
                   </div>
-                  <p className="font-medium my-1 text-xs md:text-base">Tomatoo 500 g</p>
+                  <p className="font-medium my-1 text-xs md:text-xs">Tomatoo 500 g</p>
                   <p className="text-xs md:text-sm">$39.99</p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ for (let i = 0; i < 9; i++) {
           {/* container */}
           <div className="container flex flex-col items-center">
             <div className="text-center">
-              <h1 className="font-semibold text-[#111111] text-5xl leading-tight">
+              <h1 className="font-semibold text-[#111111] text-4xl leading-tight">
                 Freshness{" "}
                 <span className="text-[#179800]">
                   You Can
@@ -119,7 +119,7 @@ for (let i = 0; i < 9; i++) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* card 1 */}
             <div className="bg-[#EFEBE3] rounded-md p-6 text-center">
-              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto">
+              <div className="w-24 h-24 bg-[#FAF9F6] rounded-full flex items-center justify-center mx-auto">
                 <Image
                   src="/images/s1.png"
                   alt=""
@@ -138,7 +138,7 @@ for (let i = 0; i < 9; i++) {
             </div>
             {/* card 2 */}
             <div className="bg-[#EFEBE3] rounded-md p-6 text-center">
-              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto">
+              <div className="w-24 h-24 bg-[#FAF9F6] rounded-full flex items-center justify-center mx-auto">
                 <Image
                   src="/images/s2.png"
                   alt=""
@@ -157,7 +157,7 @@ for (let i = 0; i < 9; i++) {
             </div>
             {/* card 3 */}
             <div className="bg-[#EFEBE3] rounded-md p-6 text-center">
-              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto">
+              <div className="w-24 h-24 bg-[#FAF9F6] rounded-full flex items-center justify-center mx-auto">
                 <Image
                   src="/images/s3.png"
                   alt=""
@@ -184,7 +184,7 @@ for (let i = 0; i < 9; i++) {
               Popular Products
             </h2>
             {/* card container */}
-            <div className="grid grid-cols-2 md:grid-cols-[1.3fr_repeat(3,1fr)] gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-[1.5fr_repeat(3,1fr)] gap-4">
               {/* card 1 */}
               <div className="offer-card col-span-2 md:col-span-1 md:row-span-3 rounded-md p-4 relative shadow-md">
                 <h4 className="text-white text-3xl mt-6 md:mt-16">30% OFF</h4>
@@ -226,6 +226,70 @@ for (let i = 0; i < 9; i++) {
                 </div>
               </div> */}
               {cards}
+            </div>
+          </div>
+        </section>
+        {/* discount section */}
+        <section>
+          {/* container */}
+          <div className="container py-12">
+            <h2 className="text-[#179800] font-semibold text-2xl mb-6">
+              Arrival & Offers
+            </h2>
+            {/* card container */}
+            <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-2 md:gap-4 *:border">
+              {/* card 1 */}
+              <div className="bg-[#115414] rounded-md grid grid-cols-2 gap-4">
+                <div className="p-6 flex flex-col justify-center gap-4">
+                  <Image
+                    src="/images/daawat.png"
+                    alt=""
+                    width={150}
+                    height={50}
+                  />
+                  <button className="bg-[#63B76D] text-[#FAF9F6] px-6 py-2 rounded-md cursor-pointer">
+                    Cook Exotic Dishes
+                  </button>
+                  <p className="text-[#FAF9F6] text-2xl">
+                    UP to{" "}
+                    <span className="text-white font-semibold">20% OFF</span>
+                  </p>
+                </div>
+                <div className="pt-6">
+                  <Image
+                    src="/images/discount_card1.png"
+                    alt=""
+                    width={300}
+                    height={400}
+                  />
+                </div>
+              </div>
+              {/* card 2 */}
+              <div className="bg-[#102861] rounded-md grid grid-cols-[1.5fr_1fr]">
+                <div className="p-6 flex flex-col justify-center gap-4">
+                  <Image
+                    src="/images/india.png"
+                    alt=""
+                    width={80}
+                    height={40}
+                  />
+                  <button className="bg-[#2A4D97] text-[#FAF9F6] px-6 py-2 rounded-md cursor-pointer">
+                    World’s No.1 Rice
+                  </button>
+                  <p className="text-[#FAF9F6] text-xl">
+                    UP to{" "}
+                    <span className="text-white font-semibold">40% OFF</span>
+                  </p>
+                </div>
+                <div className="flex flex-col justify-end items-center">
+                  <Image
+                    src="/images/discount_card2.png"
+                    alt=""
+                    width={150}
+                    height={200}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
