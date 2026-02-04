@@ -1,4 +1,4 @@
-import { Menu, Search, ShoppingCart, Star } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Menu, Search, ShoppingCart, Star, Youtube } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -240,7 +240,7 @@ for (let i = 0; i < 9; i++) {
             <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-2 md:gap-4 *:border">
               {/* card 1 */}
               <div className="bg-[#115414] rounded-md grid grid-cols-2 gap-4">
-                <div className="p-6 flex flex-col justify-center gap-4">
+                <div className="p-6 flex flex-col justify-center gap-5">
                   <Image
                     src="/images/daawat.png"
                     alt=""
@@ -266,7 +266,7 @@ for (let i = 0; i < 9; i++) {
               </div>
               {/* card 2 */}
               <div className="bg-[#102861] rounded-md grid grid-cols-[1.5fr_1fr]">
-                <div className="p-6 flex flex-col justify-center gap-4">
+                <div className="p-6 flex flex-col justify-center gap-3">
                   <Image
                     src="/images/india.png"
                     alt=""
@@ -294,6 +294,73 @@ for (let i = 0; i < 9; i++) {
           </div>
         </section>
       </main>
+      <footer className="pt-48 md:pt-32">
+        <div className="bg-[#179800] pt-40 pb-12 relative">
+          {/* Newsletter - positioned absolutely */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[96%] md:max-w-[80%] lg:max-w-[70%]">
+            <div className="bg-[#EFEBE3] rounded-md py-4 px-6 grid grid-cols-1 md:grid-cols-2 items-center">
+              {/* Newsletter content */}
+              <div className="flex justify-center">
+                <Image
+                  src="/images/newsletter.png"
+                  alt=""
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="text-center md:text-left">
+                <h4 className="text-[#179800] font-semibold text-2xl">
+                  Get Grocery News!
+                </h4>
+                <p className="text-sm my-2">
+                  Exclusive training tips, ticks, product deals and more.
+                </p>
+                <input
+                  type="text"
+                  placeholder="Enter email"
+                  className="outline-none w-full md:w-md p-2 bg-white rounded-md text-center md:text-left"
+                />
+                <button className="bg-[#179800] text-white px-6 py-2 rounded-md mt-2 cursor-pointer">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer content */}
+          <div className="container grid grid-cols-1 md:grid-cols-3 gap-2 pt-24 md:pt-2">
+            <div>
+              <Image src="/images/f_logo.png" alt="" width={80} height={50} />
+              <p className="text-xs text-white/70 mt-3">
+                Discover a world of treats, toys, and essentials handpicked for
+                your furry friends
+              </p>
+            </div>
+            <div className="py-6 md:py-0">
+              <ul className="*:text-white/70 *:hover:text-white/90 space-y-2">
+                <li>
+                  <Link href="">Product</Link>
+                </li>
+                <li>
+                  <Link href="">Services</Link>
+                </li>
+                <li>
+                  <Link href="">Contact Us</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col justify-end">
+              <h4 className="text-white/70 text-sm">Follow Us</h4>
+              <div className="flex gap-4 text-white/70 *:cursor-pointer mt-2 *:hover:text-white/90">
+                <Facebook size={18} />
+                <Instagram size={18} />
+                <Linkedin size={18} />
+                <Youtube size={18} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
