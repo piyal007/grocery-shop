@@ -6,7 +6,7 @@ export default function Home() {
   const cards = [];
 for (let i = 0; i < 9; i++) {
   cards.push(
-    <div className="flex gap-4 rounded-md bg-white p-2 md:p-4 items-center shadow-md" key={i}>
+    <div className="flex gap-2 md:gap-4 rounded-md bg-white p-2 md:p-4 items-center shadow-md" key={i}>
                 <div className="bg-[#EFEBE3] p-3 rounded-md">
                   <Image
                     src="/images/sm_card.png"
@@ -20,7 +20,7 @@ for (let i = 0; i < 9; i++) {
                     <Star fill="#FFC107" size={20} className="text-[#FFC107]" />
                     <p>4.5</p>
                   </div>
-                  <p className="font-medium my-1 text-xs md:text-xs">Tomatoo 500 g</p>
+                  <p className="font-medium my-1 text-xs md:text-xs">Tomatoo 500g</p>
                   <p className="text-xs md:text-sm">$39.99</p>
                 </div>
               </div>
@@ -30,7 +30,7 @@ for (let i = 0; i < 9; i++) {
   return (
     <>
       <header>
-        <nav className="py-4">
+        <nav className="py-4 border-b border-[#179800] md:border-0">
           {/* Container */}
           <div className="container hidden lg:grid grid-cols-3 items-center">
             {/* logo */}
@@ -82,7 +82,7 @@ for (let i = 0; i < 9; i++) {
           {/* container */}
           <div className="container flex flex-col items-center">
             <div className="text-center">
-              <h1 className="font-semibold text-[#111111] text-4xl leading-tight">
+              <h1 className="font-semibold text-[#111111] text-3xl md:text-4xl leading-tight">
                 Freshness{" "}
                 <span className="text-[#179800]">
                   You Can
@@ -91,7 +91,7 @@ for (let i = 0; i < 9; i++) {
                 </span>{" "}
                 On, Prices You’ll Love!
               </h1>
-              <p className="text-sm py-4">
+              <p className="text-xs md:text-sm py-4">
                 Shop your daily essentials at unbeatable prices. From fresh
                 produce to pantry
                 <br />
@@ -116,7 +116,7 @@ for (let i = 0; i < 9; i++) {
           <h2 className="font-semibold text-2xl text-[#179800] mb-6">
             Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {/* card 1 */}
             <div className="bg-[#EFEBE3] rounded-md p-6 text-center">
               <div className="w-24 h-24 bg-[#FAF9F6] rounded-full flex items-center justify-center mx-auto">
@@ -184,25 +184,27 @@ for (let i = 0; i < 9; i++) {
               Popular Products
             </h2>
             {/* card container */}
-            <div className="grid grid-cols-2 md:grid-cols-[1.5fr_repeat(3,1fr)] gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-[1.5fr_repeat(3,1fr)] gap-3 md:gap-4">
               {/* card 1 */}
-              <div className="offer-card col-span-2 md:col-span-1 md:row-span-3 rounded-md p-4 relative shadow-md">
-                <h4 className="text-white text-3xl mt-6 md:mt-16">30% OFF</h4>
-                <p className="text-sm my-4">
-                  Discover a world of treats, toys, and
-                  <br />
-                  essentials handpicked for
-                </p>
-                <button className="px-6 py-1 bg-white text-[#111111] rounded-md cursor-pointer mb-6">
-                  Buy Now
-                </button>
-                <div className="absolute bottom-0 right-2">
+              <div className="offer-card col-span-2 md:col-span-1 md:row-span-3 rounded-md px-4 pt-12 pb-4 relative shadow-md">
+                <div className="">
+                  <h4 className="text-white text-2xl md:text-3xl">30% OFF</h4>
+                  <p className="text-xs md:text-sm my-4">
+                    Discover a world of treats, toys, and
+                    <br />
+                    essentials handpicked for
+                  </p>
+                  <button className="px-6 py-1 bg-white text-[#111111] rounded-md cursor-pointer mb-6">
+                    Buy Now
+                  </button>
+                </div>
+                <div className="absolute bottom-0 right-0 md:right-2">
                   <Image
                     src="/images/offer_card.png"
                     alt=""
                     width={160}
                     height={250}
-                    className=" object-cover"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -237,7 +239,7 @@ for (let i = 0; i < 9; i++) {
               Arrival & Offers
             </h2>
             {/* card container */}
-            <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-2 md:gap-4 *:border">
+            <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-2 md:gap-4">
               {/* card 1 */}
               <div className="bg-[#115414] rounded-md grid grid-cols-2 gap-4">
                 <div className="p-6 flex flex-col justify-center gap-5">
@@ -247,10 +249,10 @@ for (let i = 0; i < 9; i++) {
                     width={150}
                     height={50}
                   />
-                  <button className="bg-[#63B76D] text-[#FAF9F6] px-6 py-2 rounded-md cursor-pointer">
+                  <button className="bg-[#63B76D] text-[#FAF9F6] px-3 py-2 md:px-6 md:py-2 rounded-md cursor-pointer text-xs md:text-base">
                     Cook Exotic Dishes
                   </button>
-                  <p className="text-[#FAF9F6] text-2xl">
+                  <p className="text-[#FAF9F6] text-xl md:text-2xl">
                     UP to{" "}
                     <span className="text-white font-semibold">20% OFF</span>
                   </p>
@@ -273,7 +275,7 @@ for (let i = 0; i < 9; i++) {
                     width={80}
                     height={40}
                   />
-                  <button className="bg-[#2A4D97] text-[#FAF9F6] px-6 py-2 rounded-md cursor-pointer">
+                  <button className="bg-[#2A4D97] text-[#FAF9F6] md:text-base text-xs px-3 py-2 md:px-6 md:py-2 rounded-md cursor-pointer">
                     World’s No.1 Rice
                   </button>
                   <p className="text-[#FAF9F6] text-xl">
@@ -337,7 +339,7 @@ for (let i = 0; i < 9; i++) {
               </p>
             </div>
             <div className="py-6 md:py-0">
-              <ul className="*:text-white/70 *:hover:text-white/90 space-y-2">
+              <ul className="**:text-white/70 **:hover:text-white/90 space-y-2">
                 <li>
                   <Link href="">Product</Link>
                 </li>
